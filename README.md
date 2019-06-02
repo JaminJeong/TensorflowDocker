@@ -3,4 +3,4 @@
 2. bash start_docker.sh 
 
 ## reference
-http://hub.docker.com/r/tensorflow/tensorflow/
+  - http://hub.docker.com/r/tensorflow/tensorflow/
