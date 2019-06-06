@@ -8,7 +8,7 @@ echo $tag
   #tensorflow/tensorflow:$tag \
 NAME=tf${USER}$(date +%Y%m%d%H%M%S) 
 
-if [[ "$(docker images -q tensorflow/tensorflow:$tag 2> /dev/null)" == "" ]] ; then
+if [[ "$(nvidia-docker images -q tensorflow/tensorflow:$tag 2> /dev/null)" == "" ]] ; then
   sudo docker build -t tensorflow/tensorflow:$tag ./ --build-arg VERSION=$tag
 fi
 
