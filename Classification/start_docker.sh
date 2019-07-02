@@ -4,8 +4,8 @@
 HOME=$HOME
 #default=1.13.1-gpu-py3
 default=1.0
-#tag=${1:-$default}
-#echo $tag
+tag=${1:-$default}
+echo $tag
   #tensorflow/tensorflow:$tag \
 NAME=tf${USER}$(date +%Y%m%d%H%M%S) 
 
