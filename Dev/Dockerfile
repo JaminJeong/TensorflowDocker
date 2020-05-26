@@ -20,7 +20,7 @@ RUN apt-get update && \
 ENV TZ=Asia/Seoul
 
 RUN apt-get update && \
-  apt-get install -y vim openssh-server python3-tk python3-pip git tmux tree htop wget net-tools x11-apps xfonts-base openjdk-11-jdk && \
+  apt-get install -y vim openssh-server python3-tk python3-pip git tmux tree htop wget net-tools x11-apps xfonts-base openjdk-8-jre && \
   mkdir /var/run/sshd && \
   pip install torchvision scipy tqdm easydict && \
   echo "root:1234" | chpasswd && \
@@ -38,7 +38,7 @@ RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so
 #	apt-get update && \
 #	apt-get install pycharm-community && \
 RUN wget https://download-cf.jetbrains.com/python/pycharm-community-2020.1.1.tar.gz && \
-  tar xzf pycharm-*.tar.gz -C /opt/ && \
+  tar xzf pycharm-*.tar.gz -C /root/ && \
   rm -f pycharm-*.tar.gz
 #export PATH="/opt/pycharm-*/bin:$PATH"
 
@@ -48,8 +48,7 @@ RUN wget https://download-cf.jetbrains.com/python/pycharm-community-2020.1.1.tar
 #  systemctl --user enable --now code-server
 ## Now visit http://127.0.0.1:8080. Your password is in ~/.config/code-server/config.yaml
 # https://github.com/cdr/code-server
-RUN curl -sSL https://github.com/cdr/code-server/releases/download/v3.3.1/code-server-3.3.1-linux-amd64.tar.gz | tar -C /usr/local -xz && \
-  mv /usr/local/code-server-3.3.1-linux-amd64 /usr/local/code-server-3.3.1
+RUN curl -sSL https://github.com/cdr/code-server/releases/download/v3.3.1/code-server-3.3.1-linux-amd64.tar.gz | tar -C /root -xz 
 
 #  export PATH="/usr/local/code-server-3.3.1/bin:$PATH"
   # Now visit http://127.0.0.1:8080. Your password is in ~/.config/code-server/config.yaml
