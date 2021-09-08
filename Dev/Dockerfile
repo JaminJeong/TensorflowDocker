@@ -40,7 +40,7 @@ RUN wget https://download-cf.jetbrains.com/python/pycharm-community-2020.1.1.tar
 #export PATH="/root/pycharm-*/bin:$PATH"
 
 ## visual studio code web : https://github.com/cdr/code-server
-## RUN curl -sSL https://github.com/cdr/code-server/releases/download/v3.3.1/code-server-3.3.1-linux-amd64.tar.gz | tar -C /root -xz 
+## RUN curl -sSL https://github.com/cdr/code-server/releases/download/v3.11.1/code-server-3.11.1-linux-amd64.tar.gz | tar -C /root -xz 
 RUN curl -fsSL https://code-server.dev/install.sh | sh
 
 #  export PATH="/usr/local/code-server-3.3.1/bin:$PATH"
